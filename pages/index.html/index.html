@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml" lang="en" dir="ltr">
+  <head>
+    <title>Sam Ryan Furniture</title>
+<?php include 'template/styles.html'; ?>
+  <style type="text/css">
+
+#content {
+  color: #31948B;
+  font-family: Arial, Helvetica, sans-serif;
+  min-width: 600px;
+  max-width: 700px;
+  margin: 0 auto;
+  height: 520px;
+}
+
+#content > div {
+  white-space: pre-wrap;
+}
+
+.image-right {
+  width: 275px;
+  float: right;
+}
+.image-left-bottom {
+  float: left;
+  clear: left;
+  height: 250px;
+}
+.left-bottom-spacer {
+  height: calc(100% - 250px);
+  width: 0px;
+  float: left;
+}
+
+  </style>
+  </head>
+  <body>
+<?php include 'template/header.html'; ?>
+    <div id="content">
+      <p>
+        <img src="images/index/content-right.jpg" class="image-right" />
+        <div class="left-bottom-spacer"></div>
+        <img src="images/index/content-left.jpg" class="image-left-bottom" />
+        <div><?php include 'text/homepage.txt'; ?></div>
+      </p>
+    </div>
+  </body>
+</html>
