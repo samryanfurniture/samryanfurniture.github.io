@@ -12,6 +12,11 @@
   float: left;
 }
 
+#left_sidebar h3 {
+  color: #31948B;
+  font-weight: normal;
+}
+
 #right_sidebar ul,
 #left_sidebar ul
 {
@@ -28,11 +33,14 @@
   width: 61px;
 }
 
+#left_sidebar ul li {
+  width: 160px;
+}
 
 #left_sidebar ul a,
 #left_sidebar ul a:visited
 {
-  width: 135px;
+  /* width: 135px; */
   height: 20px;
   padding: 3px 4px 0px 4px;
   margin: 0px 0px 8px 0px;
@@ -43,7 +51,9 @@
   color: black;
 }
 
-#left_sidebar ul a:hover {
+.<?php print "$page"; ?>,
+#left_sidebar ul a:hover
+{
   background-color: #b8b8b8;
 }
 
