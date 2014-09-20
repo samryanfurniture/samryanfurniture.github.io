@@ -1,0 +1,22 @@
+<div id="right_sidebar">
+  <ul>
+<?php
+$cwdprefix = getcwd() . "/";
+$files = scandir($cwdprefix . $image_dir);
+
+foreach($files as $filename) {
+  $file = $cwdprefix . $image_dir . "/" . $filename;
+  if (!is_file($file)) {
+    continue;
+  }
+  print "
+<li>
+  <a href=\"#\">
+    <img src=\"$file\" />
+  </a>
+</li>
+";
+}
+?>
+  </ul>
+</div>

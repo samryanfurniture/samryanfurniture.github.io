@@ -1,0 +1,21 @@
+<script language="Javascript" type="text/javascript">
+  window.addEventListener("load",function () {
+    var rightNavItems = document.getElementById("right_sidebar").getElementsByTagName("li"),
+        displayImage = document.getElementById("display_image");
+    for (var i=0,l=rightNavItems.length;i<l;i++) {
+      var rightNavItem = rightNavItems[i],
+          rightNavLink = rightNavItem.getElementsByTagName("a")[0],
+          rightNavImage = rightNavItem.getElementsByTagName("img")[0];
+
+      rightNavLink.addEventListener("click",(function (image_url) {
+        return function () {
+          displayImage.src = image_url;
+        };
+      })(rightNavImage.src),false);
+
+      if (i == 0) {
+        displayImage.src = rightNavImage.src;
+      }
+    }
+  },false);
+</script>
