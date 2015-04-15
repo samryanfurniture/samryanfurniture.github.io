@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml" lang="en" dir="ltr">
+<?php $page = 'gallery-chairs'; $image_dir = "images/$page"; ?>
+  <head>
+    <title>Sam Ryan Furniture</title>
+<?php include 'template/styles.html'; ?>
+<?php include 'template/style-gallery.html'; ?>
+  <style type="text/css">
+
+#content {
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 700px;
+  margin: 20px auto 40px;
+  min-height: 520px;
+}
+
+#content div {
+  color: black;
+  white-space: pre-wrap;
+}
+
+#content div::first-line {
+  font-size: 18px;
+  text-decoration: underline;
+  text-decoration-color: red;
+  -moz-text-decoration-color: red;
+  font-weight: bold;
+}
+
+.image-right {
+  width: 275px;
+  float: right;
+}
+.image-left-bottom {
+  float: left;
+  clear: left;
+  height: 250px;
+}
+/* Hack to align image at bottom */
+.left-bottom-spacer {
+  height: calc(100% - 250px);
+  width: 0px;
+  float: left;
+}
+
+#footer {
+  font-size: 0px;
+  width: 700px;
+  margin: 0 auto;
+}
+
+.footer-img {
+  width: 25%;
+  height: 138px;
+  margin: 0 0;
+  overflow: hidden;
+  display: inline-block;
+}
+.footer-img img {
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div#left_sidebar {
+  height: 100%;
+  position: default;
+  top: 0px;
+  width: 100px;
+  vertical-align: top
+}
+
+  </style>
+  </head>
+  <body>
+<?php include 'template/header.html'; ?>
+    <div id="content">
+      <table>
+        <tr>
+          <td>
+            <div id="left_sidebar">
+              <h3>About</h3>
+            </div>
+          </td>
+          <td>
+            <center><img src="images/about/image0.jpg" style="width: 60%" /></center>
+            <p>
+              <div><?php include 'text/about/0.txt'; ?></div>
+            </p>
+            <br />
+            <p>
+              <center><img src="images/about/image1.jpg" style="width: 47%;" /></center>
+            </p>
+          </td>
+    </div>
+
+<?php include 'template/footer.html'; ?>
+  </body>
+</html>

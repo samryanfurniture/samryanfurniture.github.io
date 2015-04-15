@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml" lang="en" dir="ltr">
+<?php $page = 'gallery-chairs'; $image_dir = "images/$page"; ?>
+  <head>
+    <title>Sam Ryan Furniture</title>
+<?php include 'template/styles.html'; ?>
+<?php include 'template/style-gallery.html'; ?>
+  <style type="text/css">
+
+#content {
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 700px;
+  margin: 20px auto 40px;
+  min-height: 520px;
+}
+
+#content div {
+  color: black;
+  white-space: pre-wrap;
+}
+
+#content div::first-line {
+  font-size: 18px;
+  text-decoration: underline;
+  text-decoration-color: red;
+  -moz-text-decoration-color: red;
+  font-weight: bold;
+}
+
+.image-right {
+  width: 275px;
+  float: right;
+}
+.image-left-bottom {
+  float: left;
+  clear: left;
+  height: 250px;
+}
+/* Hack to align image at bottom */
+.left-bottom-spacer {
+  height: calc(100% - 250px);
+  width: 0px;
+  float: left;
+}
+
+#footer {
+  font-size: 0px;
+  width: 700px;
+  margin: 0 auto;
+}
+
+.footer-img {
+  width: 25%;
+  height: 138px;
+  margin: 0 0;
+  overflow: hidden;
+  display: inline-block;
+}
+.footer-img img {
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div#left_sidebar {
+  height: 100%;
+  position: default;
+  top: 0px;
+  width: 100px;
+}
+
+a, a:visited, a:hover {
+  color: #31948B;
+}
+
+  </style>
+  </head>
+  <body>
+<?php include 'template/header.html'; ?>
+    <div id="content">
+      <table>
+        <tr>
+          <td>
+            <div id="left_sidebar">
+              <h3>Contact</h3>
+            </div>
+          </td>
+          <td>
+            <table>
+              <tr>
+                <td>
+                  <p>
+                    <div>
+My workshop is located in Watford.
+
+
+If you have any enquiries, please contact me on my number or email below.
+
+Telephone: 07814 212 054
+
+Email: samryan-furniture@hotmail.com
+
+
+Please visit my <a href="https://www.facebook.com/SamRyanBespokeFurnitureDesignerAndMaker">Facebook page</a> for further information and images.
+                    </div>
+                  </p>
+                </td>
+                <td>
+                  <img src="images/contact/image0.jpg" style="width: 300px; vertical-align: text-top;" />
+                </td>
+              </tr>
+            </table>
+          </td>
+    </div>
+
+  </body>
+</html>

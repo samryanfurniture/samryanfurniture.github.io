@@ -1,0 +1,11 @@
+index.html:
+    Make the whole title of the second text block bold, underlined.
+
+about.html:
+    Align sidebar to top
+
+contact.html:
+    Align sidebar to top
+
+restoration*.html:
+    Highlight selected entry in sidebar.

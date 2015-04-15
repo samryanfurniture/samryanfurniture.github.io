@@ -5,14 +5,15 @@ $cwdprefix = getcwd() . "/";
 $files = scandir($cwdprefix . $image_dir);
 
 foreach($files as $filename) {
-  $file = $cwdprefix . $image_dir . "/" . $filename;
+  $filepath = $image_dir . "/" . $filename;
+  $file = $cwdprefix . $filepath;
   if (!is_file($file)) {
     continue;
   }
   print "
 <li>
   <a href=\"#\">
-    <img src=\"$file\" />
+    <img src=\"$filepath\" />
   </a>
 </li>
 ";
