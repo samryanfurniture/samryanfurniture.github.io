@@ -74,6 +74,7 @@ table > td {
 #right_sidebar ul,
 #left_sidebar ul
 {
+  white-space: nowrap;
   list-style-type: none;
   margin: auto;
   padding: 0px;
@@ -125,10 +126,11 @@ table > td {
   color: black;
 }
 
-.gallery-tables3,
-#left_sidebar ul a:hover
-{
+.gallery-tables3 {
   background-color: #b8b8b8;
+}
+#left_sidebar ul a:hover {
+  background-color: #d8d8d8;
 }
 
 #display_image {
@@ -161,13 +163,15 @@ table > td {
           rightNavImage = rightNavItem.getElementsByTagName("img")[0];
 
       rightNavLink.addEventListener("click",(function (image_url) {
-        return function () {
+        return function (event) {
           displayImage.src = image_url;
+          event.preventDefault();
+          return false;
         };
-      })(rightNavImage.src),false);
+      })(rightNavLink.href),false);
 
       if (i == 0) {
-        displayImage.src = rightNavImage.src;
+        displayImage.src = rightNavLink.href;
       }
     }
   },false);
@@ -180,8 +184,8 @@ table > td {
   <h5 style="padding-top: 0px; position: relative; top: -20px">Furniture Designer, Maker & Restorer</h5>
   <div id="nav" style="position: relative; top: -20px;">
     <a href="index.html">welcome</a>
-    <a href="furniture_portfolio.html">furniture gallery</a>
-    <a href="restoration_chairs0.html">restoration gallery</a>
+    <a href="gallery-chairs.html">furniture gallery</a>
+    <a href="restoration_chairs1.html">restoration gallery</a>
     <a href="about.html">about</a>
     <a href="contact.html">contact</a>
   </div>
@@ -189,6 +193,60 @@ table > td {
     <div id="content">
 <div id="right_sidebar">
   <ul>
+
+<li>
+  <a href="http://i.imgur.com/PPrjDo5.jpg">
+    <img src="http://i.imgur.com/PPrjDo5t.jpg" />
+  </a>
+</li>
+
+<li>
+  <a href="http://i.imgur.com/YQeAUXA.jpg">
+    <img src="http://i.imgur.com/YQeAUXAt.jpg" />
+  </a>
+</li>
+
+<li>
+  <a href="http://i.imgur.com/2kYwC3u.jpg">
+    <img src="http://i.imgur.com/2kYwC3ut.jpg" />
+  </a>
+</li>
+
+<li>
+  <a href="http://i.imgur.com/PPZOWcB.jpg">
+    <img src="http://i.imgur.com/PPZOWcBt.jpg" />
+  </a>
+</li>
+
+<li>
+  <a href="http://i.imgur.com/7WrMN7a.jpg">
+    <img src="http://i.imgur.com/7WrMN7at.jpg" />
+  </a>
+</li>
+
+<li>
+  <a href="http://i.imgur.com/rnWRbSO.jpg">
+    <img src="http://i.imgur.com/rnWRbSOt.jpg" />
+  </a>
+</li>
+
+<li>
+  <a href="http://i.imgur.com/bxFlDee.jpg">
+    <img src="http://i.imgur.com/bxFlDeet.jpg" />
+  </a>
+</li>
+
+<li>
+  <a href="http://i.imgur.com/zutt1XC.jpg">
+    <img src="http://i.imgur.com/zutt1XCt.jpg" />
+  </a>
+</li>
+
+<li>
+  <a href="http://i.imgur.com/tclfrCr.jpg">
+    <img src="http://i.imgur.com/tclfrCrt.jpg" />
+  </a>
+</li>
   </ul>
 </div>
 <div id="left_sidebar">
@@ -197,34 +255,34 @@ table > td {
     <li class="restoration-chairs">
       <a href="restoration_chairs0.html">Chairs</a>
       <ul>
-        <li>
-          <a href="restoration_chairs0.html">Gallery 1</a>
+        <li class="gallery-chairs1">
+          <a href="restoration_chairs1.html">Ercol Oak Chair</a>
         </li>
-        <li>
-          <a href="restoration_chairs1.html">Gallery 2</a>
+        <li class="gallery-chairs2">
+          <a href="restoration_chairs2.html">Leather Chair</a>
         </li>
-        <li>
-          <a href="restoration_chairs2.html">Gallery 3</a>
+        <li class="gallery-chairs3">
+          <a href="restoration_chairs3.html">Suede Chair</a>
         </li>
-        <li>
-          <a href="restoration_chairs3.html">Gallery 4</a>
+        <li class="gallery-chairs0">
+          <a href="restoration_chairs0.html">Walnut Chair</a>
         </li>
       </ul>
     </li>
     <li class="restoration-tables">
       <a href="restoration_tables0.html">Tables</a>
       <ul>
-        <li>
-          <a href="restoration_tables0.html">Gallery 1</a>
+        <li class="gallery-tables0">
+          <a href="restoration_tables0.html">Barley Twist Side Table</a>
+        </li>
+        <li class="gallery-tables2">
+          <a href="restoration_tables2.html">Barley Twist Occasional Table</a>
+        </li>
+        <li class="gallery-tables1">
+          <a href="restoration_tables1.html">Oak Pedestal Table</a>
         </li>
         <li>
-          <a href="restoration_tables1.html">Gallery 2</a>
-        </li>
-        <li>
-          <a href="restoration_tables2.html">Gallery 3</a>
-        </li>
-        <li>
-          <a href="restoration_tables3.html">Gallery 4</a>
+          <a href="restoration_tables3.html">Oak Coffee Table</a>
         </li>
       </ul>
     </li>
@@ -232,5 +290,18 @@ table > td {
 </div>
       <img id="display_image" />
     </div>
+<table>
+  <tr>
+    <td>Sam Ryan Furniture</td>
+  </tr>
+  <tr>
+    <td>Telephone</td>
+    <td>Email</td>
+  </tr>
+  <tr>
+    <td>07814 212 054</td>
+    <td>samryan-furniture@hotmail.com</td>
+  </tr>
+</table>
   </body>
 </html>
