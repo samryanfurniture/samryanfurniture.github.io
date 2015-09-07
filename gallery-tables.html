@@ -161,13 +161,15 @@ table > td {
           rightNavImage = rightNavItem.getElementsByTagName("img")[0];
 
       rightNavLink.addEventListener("click",(function (image_url) {
-        return function () {
+        return function (event) {
           displayImage.src = image_url;
+          event.preventDefault();
+          return false;
         };
-      })(rightNavImage.src),false);
+      })(rightNavLink.href),false);
 
       if (i == 0) {
-        displayImage.src = rightNavImage.src;
+        displayImage.src = rightNavLink.href;
       }
     }
   },false);
@@ -191,38 +193,38 @@ table > td {
   <ul>
 
 <li>
-  <a href="#">
-    <img src="images/gallery-tables/image0.jpg" />
+  <a href="http://i.imgur.com/dgtRUal.jpg">
+    <img src="http://i.imgur.com/dgtRUalt.jpg" />
   </a>
 </li>
 
 <li>
-  <a href="#">
-    <img src="images/gallery-tables/image1.jpg" />
+  <a href="http://i.imgur.com/dYYqZ0T.jpg">
+    <img src="http://i.imgur.com/dYYqZ0Tt.jpg" />
   </a>
 </li>
 
 <li>
-  <a href="#">
-    <img src="images/gallery-tables/image2.jpg" />
+  <a href="http://i.imgur.com/mfv8hHz.jpg">
+    <img src="http://i.imgur.com/mfv8hHzt.jpg" />
   </a>
 </li>
 
 <li>
-  <a href="#">
-    <img src="images/gallery-tables/image3.jpg" />
+  <a href="http://i.imgur.com/p2HfRzQ.jpg">
+    <img src="http://i.imgur.com/p2HfRzQt.jpg" />
   </a>
 </li>
 
 <li>
-  <a href="#">
-    <img src="images/gallery-tables/image4.jpg" />
+  <a href="http://i.imgur.com/O5cqXsj.jpg">
+    <img src="http://i.imgur.com/O5cqXsjt.jpg" />
   </a>
 </li>
 
 <li>
-  <a href="#">
-    <img src="images/gallery-tables/image5.jpg" />
+  <a href="http://i.imgur.com/9mCsYmn.jpg">
+    <img src="http://i.imgur.com/9mCsYmnt.jpg" />
   </a>
 </li>
   </ul>

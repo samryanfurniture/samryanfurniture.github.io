@@ -1,19 +1,20 @@
 <div id="right_sidebar">
   <ul>
 <?php
-$cwdprefix = getcwd() . "/";
-$files = scandir($cwdprefix . $image_dir);
+$images_json = file_get_contents (getcwd() . "/image_urls/$page/images.json");
+$images = json_decode ($images_json);
 
-foreach($files as $filename) {
-  $filepath = $image_dir . "/" . $filename;
-  $file = $cwdprefix . $filepath;
-  if (!is_file($file)) {
-    continue;
-  }
+foreach($images as $image_info) {
+  $image_url = "$image_info->link";
+
+  $url_components = explode (".", $image_url);
+  $url_components[count($url_components)-2] = $url_components[count($url_components)-2] . "t";
+  $image_thumbnail_url = implode (".", $url_components);
+
   print "
 <li>
-  <a href=\"#\">
-    <img src=\"$filepath\" />
+  <a href=\"$image_url\">
+    <img src=\"$image_thumbnail_url\" />
   </a>
 </li>
 ";

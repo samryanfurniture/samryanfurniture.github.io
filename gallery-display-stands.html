@@ -161,13 +161,15 @@ table > td {
           rightNavImage = rightNavItem.getElementsByTagName("img")[0];
 
       rightNavLink.addEventListener("click",(function (image_url) {
-        return function () {
+        return function (event) {
           displayImage.src = image_url;
+          event.preventDefault();
+          return false;
         };
-      })(rightNavImage.src),false);
+      })(rightNavLink.href),false);
 
       if (i == 0) {
-        displayImage.src = rightNavImage.src;
+        displayImage.src = rightNavLink.href;
       }
     }
   },false);
@@ -191,20 +193,20 @@ table > td {
   <ul>
 
 <li>
-  <a href="#">
-    <img src="images/gallery-display-stands/image0.JPG" />
+  <a href="http://i.imgur.com/C8iQMmc.jpg">
+    <img src="http://i.imgur.com/C8iQMmct.jpg" />
   </a>
 </li>
 
 <li>
-  <a href="#">
-    <img src="images/gallery-display-stands/image1.jpg" />
+  <a href="http://i.imgur.com/bNYfSYe.jpg">
+    <img src="http://i.imgur.com/bNYfSYet.jpg" />
   </a>
 </li>
 
 <li>
-  <a href="#">
-    <img src="images/gallery-display-stands/image2.JPG" />
+  <a href="http://i.imgur.com/PjWFxMv.jpg">
+    <img src="http://i.imgur.com/PjWFxMvt.jpg" />
   </a>
 </li>
   </ul>

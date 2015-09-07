@@ -161,13 +161,15 @@ table > td {
           rightNavImage = rightNavItem.getElementsByTagName("img")[0];
 
       rightNavLink.addEventListener("click",(function (image_url) {
-        return function () {
+        return function (event) {
           displayImage.src = image_url;
+          event.preventDefault();
+          return false;
         };
-      })(rightNavImage.src),false);
+      })(rightNavLink.href),false);
 
       if (i == 0) {
-        displayImage.src = rightNavImage.src;
+        displayImage.src = rightNavLink.href;
       }
     }
   },false);
@@ -191,50 +193,50 @@ table > td {
   <ul>
 
 <li>
-  <a href="#">
-    <img src="images/gallery-chairs/image0.jpg" />
+  <a href="http://i.imgur.com/OtSYTDM.jpg">
+    <img src="http://i.imgur.com/OtSYTDMt.jpg" />
   </a>
 </li>
 
 <li>
-  <a href="#">
-    <img src="images/gallery-chairs/image1.jpg" />
+  <a href="http://i.imgur.com/HmAR0C4.jpg">
+    <img src="http://i.imgur.com/HmAR0C4t.jpg" />
   </a>
 </li>
 
 <li>
-  <a href="#">
-    <img src="images/gallery-chairs/image2.JPG" />
+  <a href="http://i.imgur.com/382VROW.jpg">
+    <img src="http://i.imgur.com/382VROWt.jpg" />
   </a>
 </li>
 
 <li>
-  <a href="#">
-    <img src="images/gallery-chairs/image3.jpg" />
+  <a href="http://i.imgur.com/VnhX7OM.jpg">
+    <img src="http://i.imgur.com/VnhX7OMt.jpg" />
   </a>
 </li>
 
 <li>
-  <a href="#">
-    <img src="images/gallery-chairs/image4.jpg" />
+  <a href="http://i.imgur.com/jk9cVQN.jpg">
+    <img src="http://i.imgur.com/jk9cVQNt.jpg" />
   </a>
 </li>
 
 <li>
-  <a href="#">
-    <img src="images/gallery-chairs/image5.jpg" />
+  <a href="http://i.imgur.com/rdammLa.jpg">
+    <img src="http://i.imgur.com/rdammLat.jpg" />
   </a>
 </li>
 
 <li>
-  <a href="#">
-    <img src="images/gallery-chairs/image6.jpg" />
+  <a href="http://i.imgur.com/1nvwPD5.jpg">
+    <img src="http://i.imgur.com/1nvwPD5t.jpg" />
   </a>
 </li>
 
 <li>
-  <a href="#">
-    <img src="images/gallery-chairs/image7.jpg" />
+  <a href="http://i.imgur.com/6MGEJEl.jpg">
+    <img src="http://i.imgur.com/6MGEJElt.jpg" />
   </a>
 </li>
   </ul>

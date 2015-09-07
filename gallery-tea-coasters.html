@@ -161,13 +161,15 @@ table > td {
           rightNavImage = rightNavItem.getElementsByTagName("img")[0];
 
       rightNavLink.addEventListener("click",(function (image_url) {
-        return function () {
+        return function (event) {
           displayImage.src = image_url;
+          event.preventDefault();
+          return false;
         };
-      })(rightNavImage.src),false);
+      })(rightNavLink.href),false);
 
       if (i == 0) {
-        displayImage.src = rightNavImage.src;
+        displayImage.src = rightNavLink.href;
       }
     }
   },false);
@@ -191,26 +193,26 @@ table > td {
   <ul>
 
 <li>
-  <a href="#">
-    <img src="images/gallery-tea-coasters/image0.JPG" />
+  <a href="http://i.imgur.com/tFnoYpm.jpg">
+    <img src="http://i.imgur.com/tFnoYpmt.jpg" />
   </a>
 </li>
 
 <li>
-  <a href="#">
-    <img src="images/gallery-tea-coasters/image1.JPG" />
+  <a href="http://i.imgur.com/aYeJzee.jpg">
+    <img src="http://i.imgur.com/aYeJzeet.jpg" />
   </a>
 </li>
 
 <li>
-  <a href="#">
-    <img src="images/gallery-tea-coasters/image2.JPG" />
+  <a href="http://i.imgur.com/6XMNJCR.jpg">
+    <img src="http://i.imgur.com/6XMNJCRt.jpg" />
   </a>
 </li>
 
 <li>
-  <a href="#">
-    <img src="images/gallery-tea-coasters/image3.JPG" />
+  <a href="http://i.imgur.com/HkHqPmK.jpg">
+    <img src="http://i.imgur.com/HkHqPmKt.jpg" />
   </a>
 </li>
   </ul>

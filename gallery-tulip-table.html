@@ -161,13 +161,15 @@ table > td {
           rightNavImage = rightNavItem.getElementsByTagName("img")[0];
 
       rightNavLink.addEventListener("click",(function (image_url) {
-        return function () {
+        return function (event) {
           displayImage.src = image_url;
+          event.preventDefault();
+          return false;
         };
-      })(rightNavImage.src),false);
+      })(rightNavLink.href),false);
 
       if (i == 0) {
-        displayImage.src = rightNavImage.src;
+        displayImage.src = rightNavLink.href;
       }
     }
   },false);
@@ -191,44 +193,44 @@ table > td {
   <ul>
 
 <li>
-  <a href="#">
-    <img src="images/gallery-tulip-table/image0.jpg" />
+  <a href="http://i.imgur.com/2hSbPNd.jpg">
+    <img src="http://i.imgur.com/2hSbPNdt.jpg" />
   </a>
 </li>
 
 <li>
-  <a href="#">
-    <img src="images/gallery-tulip-table/image1.jpg" />
+  <a href="http://i.imgur.com/QBhRPLg.jpg">
+    <img src="http://i.imgur.com/QBhRPLgt.jpg" />
   </a>
 </li>
 
 <li>
-  <a href="#">
-    <img src="images/gallery-tulip-table/image2.jpg" />
+  <a href="http://i.imgur.com/I4yZjPY.jpg">
+    <img src="http://i.imgur.com/I4yZjPYt.jpg" />
   </a>
 </li>
 
 <li>
-  <a href="#">
-    <img src="images/gallery-tulip-table/image3.jpg" />
+  <a href="http://i.imgur.com/GltJZse.jpg">
+    <img src="http://i.imgur.com/GltJZset.jpg" />
   </a>
 </li>
 
 <li>
-  <a href="#">
-    <img src="images/gallery-tulip-table/image4.jpg" />
+  <a href="http://i.imgur.com/Og93UuB.jpg">
+    <img src="http://i.imgur.com/Og93UuBt.jpg" />
   </a>
 </li>
 
 <li>
-  <a href="#">
-    <img src="images/gallery-tulip-table/image5.jpg" />
+  <a href="http://i.imgur.com/uIckxCg.jpg">
+    <img src="http://i.imgur.com/uIckxCgt.jpg" />
   </a>
 </li>
 
 <li>
-  <a href="#">
-    <img src="images/gallery-tulip-table/image6.jpg" />
+  <a href="http://i.imgur.com/u956ZzP.jpg">
+    <img src="http://i.imgur.com/u956ZzPt.jpg" />
   </a>
 </li>
   </ul>
