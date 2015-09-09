@@ -3,3 +3,6 @@ contact.html:
 
 restoration*.html:
     Highlight selected entry in sidebar.
+
+
+Add fade in/out for image loading.
