@@ -87,9 +87,6 @@ for (var i = 0, l = files.length; i < l; i++) {
         var inputFile = inputDir + "/" + filename;
         process.stderr.write("Creating " + filename + " from " + inputFile + "... ");
 
-        var phpReturn = child_process.spawnSync("php", ["-f", inputFile])
-        fs.writeFileSync(inputFile + ".ejs", phpReturn.stdout);
-
         var ejsFile = fs.readFileSync(inputFile + ".ejs", "utf8"),
             renderedEjs = ejs.render(ejsFile, {"images_json_container": images_json_container}, {filename: filename + ".ejs"});
         fs.writeFileSync(filename, renderedEjs);
