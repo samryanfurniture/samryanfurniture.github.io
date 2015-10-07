@@ -23,7 +23,7 @@
 <%- include("template/header.html"); -%>
     <div id="content">
 <%- include("template/gallery-image-nav.html", {page: page, images_json_container: images_json_container}); -%>
-<?php include "template/$gallery_type-sidebar.html"; ?>
+<%- include("template/" + gallery_type + "-sidebar.html"); -%>
       <img id="display_image" />
     </div>
 <%- include("template/footer.html"); -%>
