@@ -17,7 +17,7 @@ for (var i = 0, l = files.length; i < l; i++) {
         fs.writeFileSync(inputFile + ".ejs", phpReturn.stdout);
 
         var ejsFile = fs.readFileSync(inputFile + ".ejs", "utf8"),
-            renderedEjs = ejs.render(ejsFile);
+            renderedEjs = ejs.render(ejsFile, {}, {filename: "ejs.ejs"});
         fs.writeFileSync(filename, renderedEjs);
 
         process.stderr.write("Done.\n");
