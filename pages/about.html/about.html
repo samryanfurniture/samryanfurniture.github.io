@@ -3,8 +3,8 @@
 <% var page = "gallery-chairs" -%>
   <head>
     <title>Sam Ryan Furniture</title>
-<?php include 'template/styles.html'; ?>
-<?php include 'template/style-gallery.html'; ?>
+<%- include("template/styles.html"); -%>
+<%- include("template/style-gallery.html", {page: page}); -%>
   <style type="text/css">
 
 #content {
@@ -74,7 +74,7 @@ div#left_sidebar {
   </style>
   </head>
   <body>
-<?php include 'template/header.html'; ?>
+<%- include("template/header.html"); -%>
     <div id="content">
       <table>
         <tr>
@@ -86,7 +86,7 @@ div#left_sidebar {
           <td>
             <center><img src="http://i.imgur.com/r634zew.jpg" style="width: 60%" /></center>
             <p>
-              <div><?php include 'text/about/0.txt'; ?></div>
+              <div><%- include("text/about/0.txt"); %></div>
             </p>
             <br />
             <p>
@@ -95,6 +95,6 @@ div#left_sidebar {
           </td>
     </div>
 
-<?php include 'template/footer.html'; ?>
+<%- include("template/footer.html"); -%>
   </body>
 </html>

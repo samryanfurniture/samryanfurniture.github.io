@@ -3,8 +3,8 @@
 <% var page = "gallery-chairs" -%>
   <head>
     <title>Sam Ryan Furniture</title>
-<?php include 'template/styles.html'; ?>
-<?php include 'template/style-gallery.html'; ?>
+<%- include("template/styles.html"); -%>
+<%- include("template/style-gallery.html", {page: page}); -%>
   <style type="text/css">
 
 #content {
@@ -77,7 +77,7 @@ a, a:visited, a:hover {
   </style>
   </head>
   <body>
-<?php include 'template/header.html'; ?>
+<%- include("template/header.html"); -%>
     <div id="content">
       <table>
         <tr>

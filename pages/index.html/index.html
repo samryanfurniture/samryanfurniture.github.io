@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml" lang="en" dir="ltr">
   <head>
     <title>Sam Ryan Furniture</title>
-<?php include 'template/styles.html'; ?>
+<%- include("template/styles.html"); -%>
   <style type="text/css">
 
 #content {
@@ -62,12 +62,12 @@ table td {
   </style>
   </head>
   <body>
-<?php include 'template/header.html'; ?>
+<%- include("template/header.html"); -%>
     <div id="content">
       <table>
         <tr>
           <td>
-            <div><?php include 'text/homepage/0.txt'; ?></div>
+            <div><%- include("text/homepage/0.txt"); %></div>
           </td>
           <td>
             <img src="http://i.imgur.com/yGK4nFr.jpg" class="image-right" />
@@ -80,7 +80,7 @@ table td {
             <img src="http://i.imgur.com/C0u0NGN.jpg" class="image-left"/>
           </td>
           <td>
-            <div><?php include 'text/homepage/1.txt'; ?></div>
+            <div><%- include("text/homepage/1.txt"); %></div>
             <img src="http://i.imgur.com/VEpj9Xs.jpg" class="image-right" style="float: right;" />
           </td>
         </tr>
@@ -93,6 +93,6 @@ table td {
       <div class="footer-img"><img src="http://i.imgur.com/sGd4Bzkm.jpg" /></div>
       <div class="footer-img"><img src="http://i.imgur.com/Lr3C1Uym.jpg" /></div>
     </div>
-<?php include 'template/footer.html'; ?>
+<%- include("template/footer.html"); -%>
   </body>
 </html>
