@@ -1,24 +1,18 @@
 <div id="right_sidebar">
   <ul>
-<?php
-$images_json = file_get_contents (getcwd() . "/image_urls/$page/images.json");
-$images = json_decode ($images_json);
+<% var images = <?php include (getcwd() . "/image_urls/$page/images.json"); ?>;
+   for (var i = 0, l = images.length; i < l; i++) {
+     var image_info = images[i],
+         image_url = image_info.link;
 
-foreach($images as $image_info) {
-  $image_url = "$image_info->link";
-
-  $url_components = explode (".", $image_url);
-  $url_components[count($url_components)-2] = $url_components[count($url_components)-2] . "t";
-  $image_thumbnail_url = implode (".", $url_components);
-
-  print "
-<li>
-  <a href=\"$image_url\">
-    <img src=\"$image_thumbnail_url\" />
-  </a>
-</li>
-";
-}
-?>
+     var url_components = image_url.split(".");
+     url_components[url_components.length - 2] = url_components[url_components.length - 2] + "t";
+     image_thumbnail_url = url_components.join("."); %>
+    <li>
+      <a href="<%- image_url %>">
+        <img src="<%- image_thumbnail_url %>" />
+      </a>
+    </li>
+<% } -%>
   </ul>
 </div>
