@@ -1,5 +1,3 @@
 <% var page = "gallery-desks",
        gallery_type = "gallery"; -%>
-<?php
-  include 'template/gallery.html';
-?>
+<%- include("template/gallery-template.html", {page: page, gallery_type: gallery_type}); -%>

@@ -25,7 +25,7 @@ for (var i = 0, l = files.length; i < l; i++) {
         fs.writeFileSync(inputFile + ".ejs", phpReturn.stdout);
 
         var ejsFile = fs.readFileSync(inputFile + ".ejs", "utf8"),
-            renderedEjs = ejs.render(ejsFile, {"images_json_container": images_json_container}, {filename: "ejs.ejs"});
+            renderedEjs = ejs.render(ejsFile, {"images_json_container": images_json_container}, {filename: filename + ".ejs"});
         fs.writeFileSync(filename, renderedEjs);
 
         process.stderr.write("Done.\n");

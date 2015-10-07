@@ -1,5 +1,3 @@
 <% var page = "gallery-tables2",
        gallery_type = "portfolio"; -%>
-<?php
-  include 'template/restoration_gallery.html';
-?>
+<%- include("template/gallery-template.html", {page: page, gallery_type: gallery_type}); -%>

@@ -2,8 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml" lang="en" dir="ltr">
   <head>
     <title>Sam Ryan Furniture</title>
-<%- include("template/styles.html"); -%>
-<%- include("template/style-gallery.html", {page: page}); -%>
+<%- include("styles.html"); -%>
+<%- include("style-gallery.html", {page: page}); -%>
   <style type="text/css">
 
 #content {
@@ -17,15 +17,15 @@
 }
 
   </style>
-<%- include("template/script-gallery.html"); -%>
+<%- include("script-gallery.html"); -%>
   </head>
   <body>
-<%- include("template/header.html"); -%>
+<%- include("header.html"); -%>
     <div id="content">
-<%- include("template/gallery-image-nav.html", {page: page, images_json_container: images_json_container}); -%>
-<%- include("template/" + gallery_type + "-sidebar.html"); -%>
+<%- include("gallery-image-nav.html", {page: page, images_json_container: images_json_container}); -%>
+<%- include("" + gallery_type + "-sidebar.html"); -%>
       <img id="display_image" />
     </div>
-<%- include("template/footer.html"); -%>
+<%- include("footer.html"); -%>
   </body>
 </html>
