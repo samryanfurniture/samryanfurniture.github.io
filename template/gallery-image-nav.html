@@ -1,6 +1,6 @@
 <div id="right_sidebar">
   <ul>
-<% var images = <?php include (getcwd() . "/image_urls/$page/images.json"); ?>;
+<% var images = JSON.parse(images_json_container[page]);
    for (var i = 0, l = images.length; i < l; i++) {
      var image_info = images[i],
          image_url = image_info.link;
