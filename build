@@ -1,9 +1,2 @@
 #!/bin/bash
-
-for page in pages/*.html/; do
-  filename=$(basename "$page")
-  inputfile="$page$filename"
-  echo -n "Creating $filename from $inputfile... "
-  php -f $inputfile > "$filename"
-  echo "Done."
-done
+nodejs ./build.js
