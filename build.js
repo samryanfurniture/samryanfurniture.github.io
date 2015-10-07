@@ -15,67 +15,83 @@ for (var i = 0, l = image_json_files.length; i < l; i++) {
 var gallery_pages = [{
     filename: "gallery-chairs.html",
     page: "gallery-chairs",
-    gallery_type: "gallery"
-}, {
-    filename: "gallery-cheese-boards.html",
-    page: "gallery-cheese-boards",
-    gallery_type: "gallery"
-}, {
-    filename: "gallery-desks.html",
-    page: "gallery-desks",
-    gallery_type: "gallery"
-}, {
-    filename: "gallery-display-stands.html",
-    page: "gallery-display-stands",
-    gallery_type: "gallery"
-}, {
-    filename: "gallery-plant-holder.html",
-    page: "gallery-plant-holder",
-    gallery_type: "gallery"
+    gallery_type: "gallery",
+    name: "Oak Chair"
 }, {
     filename: "gallery-tables.html",
     page: "gallery-tables",
-    gallery_type: "gallery"
-}, {
-    filename: "gallery-tea-coasters.html",
-    page: "gallery-tea-coasters",
-    gallery_type: "gallery"
+    gallery_type: "gallery",
+    name: "Cherry Table"
 }, {
     filename: "gallery-tulip-table.html",
     page: "gallery-tulip-table",
-    gallery_type: "gallery"
+    gallery_type: "gallery",
+    name: "Tulip Table"
 }, {
-    filename: "restoration_chairs0.html",
-    page: "gallery-chairs0",
-    gallery_type: "portfolio"
+    filename: "gallery-desks.html",
+    page: "gallery-desks",
+    gallery_type: "gallery",
+    name: "Maple Desk"
+}, {
+    filename: "gallery-display-stands.html",
+    page: "gallery-display-stands",
+    gallery_type: "gallery",
+    name: "Display Stand"
+}, {
+    filename: "gallery-tea-coasters.html",
+    page: "gallery-tea-coasters",
+    gallery_type: "gallery",
+    name: "Meranti Tea Coaster"
+}, {
+    filename: "gallery-cheese-boards.html",
+    page: "gallery-cheese-boards",
+    gallery_type: "gallery",
+    name: "Oak Cheese Board"
+}, {
+    filename: "gallery-plant-holder.html",
+    page: "gallery-plant-holder",
+    gallery_type: "gallery",
+    name: "Tulip Plant Holder"
 }, {
     filename: "restoration_chairs1.html",
     page: "gallery-chairs1",
-    gallery_type: "portfolio"
+    gallery_type: "portfolio",
+    name: "Ercol Oak Chair"
 }, {
     filename: "restoration_chairs2.html",
     page: "gallery-chairs2",
-    gallery_type: "portfolio"
+    gallery_type: "portfolio",
+    name: "Leather Chair"
 }, {
     filename: "restoration_chairs3.html",
     page: "gallery-chairs3",
-    gallery_type: "portfolio"
+    gallery_type: "portfolio",
+    name: "Suede Chair"
+}, {
+    filename: "restoration_chairs0.html",
+    page: "gallery-chairs0",
+    gallery_type: "portfolio",
+    name: "Walnut Chair"
 }, {
     filename: "restoration_tables0.html",
     page: "gallery-tables0",
-    gallery_type: "portfolio"
-}, {
-    filename: "restoration_tables1.html",
-    page: "gallery-tables1",
-    gallery_type: "portfolio"
+    gallery_type: "portfolio",
+    name: "Barley Twist Side Table"
 }, {
     filename: "restoration_tables2.html",
     page: "gallery-tables2",
-    gallery_type: "portfolio"
+    gallery_type: "portfolio",
+    name: "Barley Twist Occasional Table"
+}, {
+    filename: "restoration_tables1.html",
+    page: "gallery-tables1",
+    gallery_type: "portfolio",
+    name: "Oak Pedestal Table"
 }, {
     filename: "restoration_tables3.html",
     page: "gallery-tables3",
-    gallery_type: "portfolio"
+    gallery_type: "portfolio",
+    name: "Oak Coffee Table"
 }];
 
 files = fs.readdirSync("./pages");

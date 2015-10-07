@@ -1,3 +1,4 @@
 #!/bin/bash
 
 rm *.html
+echo "Deleted all .html files in the current directory."
