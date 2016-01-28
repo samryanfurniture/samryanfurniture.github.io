@@ -18,12 +18,21 @@ imgur_gallery.getUserAlbums(accountName, function (albumsInfo) {
     (function (gallery_page) {
       imgur_gallery.getUserAlbumImages(accountName, gallery_page.albumInfo.id, function (imagesInfo) {
         try {
-          fs.writeFileSync("./image_urls/" + gallery_page.page + "/images.json", JSON.stringify(imagesInfo));
-        }
-        catch (e) {
           fs.mkdirSync("./image_urls/" + gallery_page.page);
-          fs.writeFileSync("./image_urls/" + gallery_page.page + "/images.json", JSON.stringify(imagesInfo));
-        }
+        } catch (e) {}
+        fs.writeFileSync("./image_urls/" + gallery_page.page + "/images.json", JSON.stringify(imagesInfo, [
+    "id",
+    "title",
+    "description",
+    "type",
+    "width",
+    "height",
+    "size",
+    "account_url",
+    "account_id",
+    "comment_preview",
+    "link"
+        ], 2));
       }, function (failureReason) {
         log("ERROR from getUserAlbumImages: " + imgur_gallery.failureReasons[failureReason]);
       });
