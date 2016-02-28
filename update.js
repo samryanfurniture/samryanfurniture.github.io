@@ -34,10 +34,10 @@ imgur_gallery.getUserAlbums(accountName, function (albumsInfo) {
     "link"
         ], 2));
       }, function (failureReason) {
-        log("ERROR from getUserAlbumImages: " + imgur_gallery.failureReasons[failureReason]);
+        console.log("ERROR from getUserAlbumImages: " + imgur_gallery.failureReasons[failureReason]);
       });
     })(gallery_pages[i]);
   }
 }, function (failureReason) {
-  log("ERROR from getUserAlbums: " + imgur_gallery.failureReasons[failureReason]);
+  console.log("ERROR from getUserAlbums: " + imgur_gallery.failureReasons[failureReason]);
 });
